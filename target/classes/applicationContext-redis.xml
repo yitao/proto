@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"
+       default-lazy-init="true">
+
+	<description>Spring redis配置文件</description>
+
+	<bean id="jedisPoolConfig1" class="redis.clients.jedis.JedisPoolConfig">
+		<property name="maxTotal" value="${redis1.maxActive}" />
+		<property name="maxIdle" value="${redis1.maxIdle}" />
+		<property name="maxWaitMillis" value="${redis1.maxWait}" />
+		<property name="testOnBorrow" value="true" />
+	</bean>
+
+	<bean id="jedisPoolConfig2" class="redis.clients.jedis.JedisPoolConfig">
+		<property name="maxTotal" value="${redis2.maxActive}" />
+		<property name="maxIdle" value="${redis2.maxIdle}" />
+		<property name="maxWaitMillis" value="${redis2.maxWait}" />
+		<property name="testOnBorrow" value="true" />
+	</bean>
+
+
+	<bean id="jedisConnectionFactory2" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
+		<property name="poolConfig" ref="jedisPoolConfig2" />
+		<property name="hostName" value="${redis2.ip}" />
+		<property name="port" value="${redis2.port}" />
+		<property name="password" value="${redis2.pass}" />
+		<property name="timeout" value="${redis2.timeout}" />
+		<property name="usePool" value="true" />
+		<property name="database" value="1" />
+	</bean>
+
+	<bean id="permanentRedisTemplate" class="org.springframework.data.redis.core.RedisTemplate">
+		<property name="connectionFactory">
+			<bean class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
+				<property name="poolConfig" ref="jedisPoolConfig1" />
+				<property name="hostName" value="${redis1.ip}" />
+				<property name="port" value="${redis1.port}" />
+				<property name="password" value="${redis1.pass}" />
+				<property name="timeout" value="${redis1.timeout}" />
+				<property name="usePool" value="true" />
+				<property name="database" value="1" />
+			</bean>
+		</property>
+	</bean>
+
+
+	<bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate">
+		<property name="connectionFactory" ref="jedisConnectionFactory2" />
+	</bean>
+
+	<!-- cacheManager -->
+	<bean id="cacheManager" class="org.springframework.data.redis.cache.RedisCacheManager">
+		<constructor-arg index="0" ref="redisTemplate" />
+		<!-- 打开前缀防止冲突 -->
+		<property name="usePrefix" value="true" />
+		<property name="expires">
+			<map>
+				<!-- 验证码cache 过期时间15分钟 -->
+				<entry key="verifyCodeCache" value="900" />
+				<!-- bindInfo 过期时间1天 -->
+				<entry key="bindInfoCache" value="86400" />
+				<entry key="JS_TICKET" value="7100" />
+			</map>
+		</property>
+	</bean>
+
+	<!-- seesion相关 -->
+	<bean id="redisHttpSessionConfiguration" class="org.springframework.session.data.redis.config.annotation.web.http.RedisHttpSessionConfiguration">
+		<!-- session过期时间 默认1800秒 负数为永不过期 -->
+		<property name="maxInactiveIntervalInSeconds" value="1800" />
+	</bean>
+
+	<!-- Spring session 在遇到redis关闭了config命令后的解决办法 -->
+	<!-- http://docs.spring.io/spring-session/docs/current/reference/html5/#api-redisoperationssessionrepository-sessiondestroyedevent -->
+	<util:constant static-field="org.springframework.session.data.redis.config.ConfigureRedisAction.NO_OP"/>
+
+</beans>

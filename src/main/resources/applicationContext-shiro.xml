@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!--自定义的Roles Filter-->
+	<bean id="anyRoles" class="com.saysth.core.web.filter.RolesAuthorizationFilter" />
+	<bean id="permissionAdmin" class="com.yt.permission.shiro.filter.PermissionAuthorizationFilter" />
+	<bean id="permissionCompany" class="com.yt.permission.shiro.filter.PermissionAuthorizationFilter" />
+	<bean id="permissionDeviceChannel" class="com.yt.permission.shiro.filter.PermissionAuthorizationFilter" />
+	<bean id="permissionPromotionChannel" class="com.yt.permission.shiro.filter.PermissionAuthorizationFilter" />
+
+	<!--&lt;!&ndash; 管理员后台Realm&ndash;&gt;-->
+	<!--<bean id="adminRealm" class="com.saysth.admin.shiro.realm.AdminRealm" />-->
+	<!--&lt;!&ndash; 公司Realm&ndash;&gt;-->
+	<!--<bean id="companyRealm" class="com.saysth.core.shiro.realm.CompanyRealm" />-->
+	<!--&lt;!&ndash; 分销渠道Realm&ndash;&gt;-->
+	<!--<bean id="deviceChannelRealm" class="com.saysth.channel.shiro.realm.DeviceChannelRealm" />-->
+	<!--&lt;!&ndash; 推广渠道Realm&ndash;&gt;-->
+	<!--<bean id="promotionChannelRealm" class="com.saysth.channel.shiro.realm.PromotionChannelRealm" />-->
+
+<!--&lt;!&ndash;	<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">-->
+		<!--<property name="realms">-->
+			<!--<list>-->
+				<!--<ref bean="adminRealm" />-->
+				<!--<ref bean="companyRealm" />-->
+				<!--<ref bean="deviceChannelRealm" />-->
+				<!--<ref bean="promotionChannelRealm" />-->
+			<!--</list>-->
+		<!--</property>-->
+		<!--&lt;!&ndash; 需要使用cache的话加上这句-->
+		<!--<property name="cacheManager" ref="shiroEhcacheManager" />-->
+		 <!--&ndash;&gt;-->
+	<!--</bean>&ndash;&gt;-->
+	<!--<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">-->
+		<!--<property name="realm">-->
+			<!--<ref bean="adminRealm" />-->
+		<!--</property>-->
+		<!--&lt;!&ndash; 需要使用cache的话加上这句-->
+		<!--<property name="cacheManager" ref="shiroEhcacheManager" />-->
+		 <!--&ndash;&gt;-->
+	<!--</bean>-->
+	<!--<bean id="companySecurityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">-->
+		<!--<property name="realm">-->
+			<!--<ref bean="companyRealm" />-->
+		<!--</property>-->
+		<!--&lt;!&ndash; 需要使用cache的话加上这句-->
+		<!--<property name="cacheManager" ref="shiroEhcacheManager" />-->
+		 <!--&ndash;&gt;-->
+	<!--</bean>-->
+	<!--<bean id="deviceChannelSecurityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">-->
+		<!--<property name="realm">-->
+			<!--<ref bean="deviceChannelRealm" />-->
+		<!--</property>-->
+		<!--&lt;!&ndash; 需要使用cache的话加上这句-->
+		<!--<property name="cacheManager" ref="shiroEhcacheManager" />-->
+		 <!--&ndash;&gt;-->
+	<!--</bean>-->
+	<!--<bean id="promotionChannelSecurityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">-->
+		<!--<property name="realm">-->
+			<!--<ref bean="promotionChannelRealm" />-->
+		<!--</property>-->
+		<!--&lt;!&ndash; 需要使用cache的话加上这句-->
+		<!--<property name="cacheManager" ref="shiroEhcacheManager" />-->
+		 <!--&ndash;&gt;-->
+	<!--</bean>-->
+
+
+
+	<!--<bean id="adminShiroFilter" class="com.yt.permission.shiro.bean.PermissionShiroFilterFactoryBean">-->
+		<!--<property name="securityManager" ref="securityManager" />-->
+		<!--<property name="loginUrl" value="/admin/login.do" />-->
+		<!--<property name="unauthorizedUrl" value="/admin/unauthorized.do" />-->
+		<!--<property name="filters">-->
+			<!--<map>-->
+				<!--&lt;!&ndash;<entry key="anyRoles" value-ref="anyRoles"/>&ndash;&gt;-->
+				<!--<entry key="permission" value-ref="permissionAdmin"/>-->
+			<!--</map>-->
+		<!--</property>-->
+		<!--<property name="filterChainDefinitions">-->
+			<!--<value>-->
+				<!--/admin/login.do=anon-->
+				<!--/admin/logout.do=anon-->
+				<!--/admin/unauthorized.do=anon-->
+				<!--/admin/**=permission[admin]-->
+			<!--</value>-->
+		<!--</property>-->
+	<!--</bean>-->
+
+
+
+	<!--<bean id="companyShiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">-->
+		<!--<property name="securityManager" ref="companySecurityManager" />-->
+		<!--<property name="loginUrl" value="/company/login.do" />-->
+		<!--<property name="unauthorizedUrl" value="/company/unauthorized.do" />-->
+		<!--<property name="filters">-->
+			<!--<map>-->
+				<!--&lt;!&ndash;<entry key="anyRoles" value-ref="anyRoles"/>&ndash;&gt;-->
+				<!--<entry key="permission" value-ref="permissionCompany"/>-->
+			<!--</map>-->
+		<!--</property>-->
+		<!--<property name="filterChainDefinitions">-->
+			<!--<value>-->
+				<!--/company/login.do*=anon-->
+				<!--/company/logout.do*=anon-->
+				<!--/company/unauthorized.do*=anon-->
+				<!--/company/**=permission-->
+			<!--</value>-->
+		<!--</property>-->
+	<!--</bean>-->
+
+
+	<!--<bean id="deviceChannelShiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">-->
+		<!--<property name="securityManager" ref="deviceChannelSecurityManager" />-->
+		<!--<property name="loginUrl" value="/deviceChannel/login.do" />-->
+		<!--<property name="unauthorizedUrl" value="/deviceChannel/unauthorized.do" />-->
+		<!--<property name="filters">-->
+			<!--<map>-->
+				<!--&lt;!&ndash;<entry key="anyRoles" value-ref="anyRoles"/>&ndash;&gt;-->
+				<!--<entry key="permission" value-ref="permissionDeviceChannel"/>-->
+			<!--</map>-->
+		<!--</property>-->
+		<!--<property name="filterChainDefinitions">-->
+			<!--<value>-->
+				<!--/deviceChannel/login.do*=anon-->
+				<!--/deviceChannel/logout.do*=anon-->
+				<!--/deviceChannel/unauthorized.do*=anon-->
+				<!--/deviceChannel/**=permission-->
+			<!--</value>-->
+		<!--</property>-->
+	<!--</bean>-->
+
+	<!--<bean id="promotionChannelShiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">-->
+		<!--<property name="securityManager" ref="promotionChannelSecurityManager" />-->
+		<!--<property name="loginUrl" value="/promotionChannel/login.do" />-->
+		<!--<property name="unauthorizedUrl" value="/promotionChannel/unauthorized.do" />-->
+		<!--<property name="filters">-->
+			<!--<map>-->
+				<!--&lt;!&ndash;<entry key="anyRoles" value-ref="anyRoles"/>&ndash;&gt;-->
+				<!--<entry key="permission" value-ref="permissionPromotionChannel"/>-->
+			<!--</map>-->
+		<!--</property>-->
+		<!--<property name="filterChainDefinitions">-->
+			<!--<value>-->
+				<!--/promotionChannel/login.do*=anon-->
+				<!--/promotionChannel/logout.do*=anon-->
+				<!--/promotionChannel/unauthorized.do*=anon-->
+				<!--/promotionChannel/**=permission-->
+			<!--</value>-->
+		<!--</property>-->
+	<!--</bean>-->
+
+	<!--&lt;!&ndash; 用户授权信息Cache, 采用EhCache，需要的话就配置上此信息-->
+	<!--<bean id="shiroEhcacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">-->
+		<!--<property name="cacheManagerConfigFile" value="classpath:ehcache-shiro.xml" />-->
+	<!--</bean>-->
+	<!--&ndash;&gt;-->
+
+	<!--<bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor" />-->
+	<!--<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator" depends-on="lifecycleBeanPostProcessor">-->
+		<!--<property name="proxyTargetClass" value="true" />-->
+	<!--</bean>-->
+
+	<!--<bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">-->
+		<!--<property name="securityManager" ref="securityManager" />-->
+	<!--</bean>-->
+
+</beans>

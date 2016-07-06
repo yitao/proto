@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yt.permission.entity.Action">
+    <sql id="tableName">
+        p_action
+    </sql>
+    
+    <insert id="insert" parameterType="Action">
+        INSERT  INTO <include refid="tableName"/>(id,ctime,`order`,label,`value`,`action`,hint,`desc`,module_id)
+        VALUES (#{id},#{ctime},#{order},#{label},#{value},#{action},#{hint},#{desc},#{moduleId})
+    </insert>
+
+    <update id="update" parameterType="Action">
+        UPDATE <include refid="tableName"/>
+        <set>
+            <if test="order != null">
+                `order` = #{order},
+            </if>
+            <if test="label != null">
+                `label` = #{label},
+            </if>
+            <if test="value != null">
+                `value` = #{value},
+            </if>
+            <if test="action != null">
+                `action` = #{action},
+            </if>
+            <if test="hint != null">
+                `hint` = #{hint},
+            </if>
+            <if test="desc != null">
+                `desc` = #{desc},
+            </if>
+            <if test="moduleId != null">
+                `module_id` = #{moduleId},
+            </if>
+            <if test="mtime != null">
+                `mtime` = #{mtime},
+            </if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <delete id="deleteById" parameterType="String">
+        DELETE FROM <include refid="tableName"/> WHERE id = #{id}
+    </delete>
+
+    <update id="resetAllByModuleId" parameterType="String">
+        UPDATE <include refid="tableName"/> SET module_id="" WHERE module_id = #{moduleId}
+    </update>
+
+    <select id="findAll" resultType="Action">
+        SELECT * FROM <include refid="tableName"/>
+    </select>
+
+    <select id="getById" parameterType="String" resultType="Action">
+        SELECT * FROM <include refid="tableName"/> WHERE id = #{id}
+    </select>
+
+    <select id="findAllByModuleId" parameterType="String" resultType="Action">
+        SELECT * FROM <include refid="tableName"/> WHERE module_id = #{moduleId}
+    </select>
+
+    <select id="findOneByAction" parameterType="String" resultType="Action">
+        SELECT * FROM <include refid="tableName"/> WHERE `action` = #{action}
+    </select>
+
+    <delete id="deleteAllByModuleId" parameterType="String">
+        DELETE <include refid="tableName"/> WHERE module_id = #{moduleId}
+    </delete>
+
+</mapper>

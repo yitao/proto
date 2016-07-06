@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yt.permission.entity.Account">
+    <sql id="tableName">
+        p_account
+    </sql>
+    <insert id="insert" parameterType="Account">
+        INSERT  INTO <include refid="tableName"/>(id,ctime,`order`,account,password,inuse)
+        VALUES (#{id},#{ctime},#{order},#{account},#{password},#{inuse})
+    </insert>
+
+    <delete id="deleteById" parameterType="String">
+        DELETE FROM <include refid="tableName"/> WHERE id = #{id}
+    </delete>
+
+    <select id="getById" parameterType="String" resultType="Account">
+        select * from <include refid="tableName"/> where id = #{id}
+    </select>
+
+
+    <update id="update" parameterType="Account">
+        UPDATE <include refid="tableName"/>
+        <set>
+            <if test="mtime != null">
+                mtime = #{mtime},
+            </if>
+            <if test="order != null">
+                'order'= #{order},
+            </if>
+            <if test="account != null">
+                account = #{account},
+            </if>
+            <if test="password != null">
+                password = #{password},
+            </if>
+            <if test="inuse != null">
+                inuse = #{inuse},
+            </if>
+        </set>
+        WHERE id=#{id}
+    </update>
+
+
+    <select id="getByMap" parameterType="java.util.Map" resultType="Account">
+        select * from <include refid="tableName"/>
+        <where>
+            1 = 1
+            <if test="account != null">
+                and account = #{account}
+            </if>
+            <if test="password != password">
+                and ctime = #{ctime}
+            </if>
+            <if test="inuse != inuse">
+                and inuse = #{inuse}
+            </if>
+
+        </where>
+    </select>
+
+
+    <select id="findAll" resultType="Action">
+        SELECT * FROM <include refid="tableName"/>
+    </select>
+
+</mapper>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   http://www.springframework.org/schema/beans/spring-beans.xsd
+	   http://www.springframework.org/schema/data/mongo
+	   http://www.springframework.org/schema/data/mongo/spring-mongo.xsd">
+
+	<description>spring mongodb配置文件</description>
+
+	<mongo:mongo-client id="mongo" host="${mongodb.host}" port="${mongodb.port}" credentials="${mongodb.credentials}">
+		<mongo:client-options write-concern="NORMAL"
+		                      connections-per-host="${mongodb.poolsize}"
+		                      threads-allowed-to-block-for-connection-multiplier="${mongodb.threadsAllowedToBlockForConnectionMultiplier}"
+		                      connect-timeout="1000"
+		                      max-wait-time="${mongodb.maxWaitTime}"
+		                      socket-keep-alive="true"
+		                      socket-timeout="1500"
+		/>
+	</mongo:mongo-client>
+
+	<mongo:db-factory id="mongoDbFactory" dbname="${mongodb.database}" mongo-ref="mongo" write-concern="MAJORITY"/>
+
+	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+		<constructor-arg ref="mongoDbFactory"/>
+	</bean>
+
+	<!--
+	<mongo:mapping-converter id="mongoConverter" base-package="com.saysth.core.entity">
+		<mongo:custom-converters base-package="com.saysth.core.entity" />
+	</mongo:mapping-converter>
+	-->
+
+	<mongo:repositories base-package="com.proto.*.dao"/>
+</beans>

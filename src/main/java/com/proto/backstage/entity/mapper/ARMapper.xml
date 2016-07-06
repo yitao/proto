@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yt.permission.entity.AR">
+    <sql id="tableName">
+        p_ar
+    </sql>
+
+    <resultMap id="arMap" type="AR">
+        <result column="account_id" property="accountId"/>
+        <result column="role_id" property="roleId"/>
+    </resultMap>
+
+
+    <resultMap id="RoleMap" type="Role">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="buildIn" column="buildIn"/>
+        <result property="desc" column="desc"/>
+    </resultMap>
+
+    <insert id="insert" parameterType="AR">
+        INSERT INTO<include refid="tableName"/>(account_id,role_id)
+        VALUES (#{accountId},#{roleId})
+    </insert>
+
+    <delete id="delete" parameterType="AR">
+        DELETE FROM
+        <include refid="tableName"/>
+        WHERE account_id = #{accountId} AND role_id = #{roleId}
+    </delete>
+
+    <delete id="deleteByAccountId" parameterType="String">
+        DELETE FROM
+        <include refid="tableName"/>
+        WHERE account_id = #{accountId}
+    </delete>
+
+    <delete id="deleteByRoleId" parameterType="String">
+        DELETE FROM
+        <include refid="tableName"/>
+        WHERE role_id = #{roleId}
+    </delete>
+
+
+</mapper>

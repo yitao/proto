@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<typeAliases>
+		<!-- configure your typealias -->
+		<!--<typeAlias type="com.saysth.admin.entity.AdminUser" alias="AdminUser" />-->
+	</typeAliases>
+	<mappers>
+		<!-- configure your mapper -->
+		<!--<mapper resource="com/saysth/admin/entity/AdminUserMapper.xml" />-->
+	</mappers>
+
+</configuration>

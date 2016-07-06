@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   http://www.springframework.org/schema/beans/spring-beans.xsd"
+	   default-lazy-init="true">
+
+	<description>Spring Quartz配置文件，任何对预定时间的改动都需要清除MYSQL数据库中相应记录</description>
+
+	<!-- 使用quartz定时执行数据加载 -->
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+<!--				<ref bean="deleteRejectContactJobTrigger" />
+				<ref bean="wxQrUpdateJobTrigger" />
+				<ref bean="deviceBatchJobTrigger" />
+				<ref bean="companyUserReportJobTrigger" />
+				<ref bean="dailyStatReportJobTrigger" />-->
+				<!--
+				<ref bean="qiniuSrcCleanJobTrigger" />
+				-->
+			</list>
+		</property>
+		<!-- 启动时延期2秒开始任务 -->
+		<property name="startupDelay" value="2" />
+		<!-- 保存Job数据到数据库所需的数据源 -->
+		<property name="dataSource" ref="dataSource" />
+		<!-- Job接受applicationContext的成员变量名 -->
+		<property name="applicationContextSchedulerContextKey" value="applicationContext" />
+		<property name="configLocation" value="classpath:quartz.properties" />
+	</bean>
+
+	<!--&lt;!&ndash; 心跳 &ndash;&gt;-->
+	<!--<bean id="heartbeatJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">-->
+		<!--<property name="jobDetail" ref="heartbeatJobDetail" />-->
+		<!--<property name="timeZone" ref="timeZone" />-->
+		<!--<property name="cronExpression" value="0 */10 * * * ?" />-->
+	<!--</bean>-->
+	<!--<bean id="heartbeatJobDetail" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">-->
+		<!--<property name="durability" value="true" />-->
+		<!--<property name="jobClass" value="com.saysth.core.batch.HeartbeatJob" />-->
+	<!--</bean>-->
+	<!--&lt;!&ndash; 心跳 &ndash;&gt;-->
+
+	<!--&lt;!&ndash; 3点清除3天前被拒绝添加名片记录 &ndash;&gt;-->
+	<!--<bean id="deleteRejectContactJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">-->
+		<!--<property name="jobDetail" ref="deleteRejectContactJobDetail" />-->
+		<!--<property name="timeZone" ref="timeZone" />-->
+		<!--<property name="cronExpression" value="0 0 3 * * ?" />-->
+	<!--</bean>-->
+	<!--<bean id="deleteRejectContactJobDetail" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">-->
+		<!--<property name="durability" value="true" />-->
+		<!--<property name="jobClass" value="com.saysth.core.batch.DeleteRejectContactJob" />-->
+	<!--</bean>-->
+	<!--&lt;!&ndash; 微信带参二维码更新 &ndash;&gt;-->
+
+	<!--&lt;!&ndash; 4点自动微信带参二维码更新 &ndash;&gt;-->
+	<!--<bean id="wxQrUpdateJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">-->
+		<!--<property name="jobDetail" ref="wxQrUpdateJobDetail" />-->
+		<!--<property name="timeZone" ref="timeZone" />-->
+		<!--<property name="cronExpression" value="0 0 4 * * ?" />-->
+	<!--</bean>-->
+	<!--<bean id="wxQrUpdateJobDetail" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">-->
+		<!--<property name="durability" value="true" />-->
+		<!--<property name="jobClass" value="com.saysth.core.batch.WxQrUpdateJob" />-->
+	<!--</bean>-->
+	<!--&lt;!&ndash; 微信带参二维码更新 &ndash;&gt;-->
+
+	<!--&lt;!&ndash; 设备申请处理任务 &ndash;&gt;-->
+	<!--<bean id="deviceBatchJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">-->
+		<!--<property name="jobDetail" ref="deviceBatchJobDetail" />-->
+		<!--<property name="timeZone" ref="timeZone" />-->
+		<!--<property name="cronExpression" value="*/10 * * * * ?" />-->
+	<!--</bean>-->
+	<!--<bean id="deviceBatchJobDetail" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">-->
+		<!--<property name="durability" value="true" />-->
+		<!--<property name="jobClass" value="com.saysth.core.batch.DeviceApplyBatchJob" />-->
+	<!--</bean>-->
+	<!--&lt;!&ndash; 设备申请处理任务 &ndash;&gt;-->
+
+	<!--<bean id="timeZone" class="java.util.TimeZone" factory-method="getTimeZone">-->
+		<!--<constructor-arg value="Asia/Shanghai" />-->
+	<!--</bean>-->
+
+	<!--&lt;!&ndash; 凌晨2点 生成昨天公司和用户交换报表 &ndash;&gt;-->
+	<!--<bean id="companyUserReportJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">-->
+		<!--<property name="jobDetail" ref="companyUserReportJobDetail" />-->
+		<!--<property name="timeZone" ref="timeZone" />-->
+		<!--<property name="cronExpression" value="0 0 2 * * ?" />-->
+	<!--</bean>-->
+	<!--<bean id="companyUserReportJobDetail" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">-->
+		<!--<property name="durability" value="true" />-->
+		<!--<property name="jobClass" value="com.saysth.core.batch.CompanyUserExchangeReportJob" />-->
+	<!--</bean>-->
+	<!--&lt;!&ndash; 生成昨天公司和用户交换报表 任务 &ndash;&gt;-->
+
+	<!--&lt;!&ndash; 凌晨9:30 发送昨天统计报表 &ndash;&gt;-->
+	<!--<bean id="dailyStatReportJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">-->
+		<!--<property name="jobDetail" ref="dailyStatReportJobDetail" />-->
+		<!--<property name="timeZone" ref="timeZone" />-->
+		<!--<property name="cronExpression" value="0 30 9 * * ?" />-->
+	<!--</bean>-->
+	<!--<bean id="dailyStatReportJobDetail" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">-->
+		<!--<property name="durability" value="true" />-->
+		<!--<property name="jobClass" value="com.saysth.core.batch.DailyStatReportJob" />-->
+	<!--</bean>-->
+	<!--&lt;!&ndash; 凌晨9:30 发送昨天统计报表 &ndash;&gt;-->
+
+	<!--&lt;!&ndash; 凌晨3点 清理七牛昨天图片 任务 &ndash;&gt;-->
+	<!--<bean id="qiniuSrcCleanJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">-->
+		<!--<property name="jobDetail" ref="qiniuSrcCleanJobDetail" />-->
+		<!--<property name="timeZone" ref="timeZone" />-->
+		<!--<property name="cronExpression" value="0 10 16 * * ?" />-->
+	<!--</bean>-->
+	<!--<bean id="qiniuSrcCleanJobDetail" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">-->
+		<!--<property name="durability" value="true" />-->
+		<!--<property name="jobClass" value="com.saysth.core.batch.QiniuSrcCleanJob" />-->
+	<!--</bean>-->
+	<!--&lt;!&ndash; 凌晨3点 清理七牛昨天图片 任务 &ndash;&gt;-->
+
+</beans>
