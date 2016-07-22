@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.backstage.entity.Module">
+    <sql id="tableName">
+        p_module
+    </sql>
+
+    <resultMap id="actionMap" type="Action">
+        <id column="action_id" property="id"/>
+        <result column="action_label" property="label"/>
+        <result column="action_action" property="action"/>
+    </resultMap>
+    <resultMap id="maMap" type="Module">
+        <id column="id" property="id"/>
+        <result column="label" property="label"/>
+        <collection property="actions" javaType="java.util.List" resultMap="actionMap"/>
+    </resultMap>
+
+
+    <insert id="insert" parameterType="Module">
+        INSERT INTO <include refid="tableName"/>(id,ctime,`order`,label,`value`,hint,`desc`,fa_module_id,is_default)
+        VALUES (#{id},#{ctime},#{order},#{label},#{value},#{hint},#{desc},#{faModuleId},#{isDefault})
+    </insert>
+
+    <update id="update" parameterType="Module">
+        UPDATE <include refid="tableName"/>
+        <set>
+            <if test="order != null">
+                `order` = #{order},
+            </if>
+            <if test="label != null">
+                `label` = #{label},
+            </if>
+            <if test="value != null">
+                `value` = #{value},
+            </if>
+            <if test="faModuleId != null">
+                `fa_module_id` = #{faModuleId},
+            </if>
+            <if test="hint != null">
+                `hint` = #{hint},
+            </if>
+            <if test="desc != null">
+                `desc` = #{desc},
+            </if>
+            <if test="isDefault != null">
+                `is_default` = #{isDefault},
+            </if>
+            <if test="mtime != null">
+                `mtime` = #{mtime},
+            </if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <delete id="deleteById" parameterType="String">
+        DELETE FROM <include refid="tableName"/> WHERE id = #{id}
+    </delete>
+
+    <select id="findAll" resultType="Module">
+        SELECT * FROM <include refid="tableName"/>
+    </select>
+
+    <select id="getById" parameterType="String" resultType="Module">
+        SELECT * FROM <include refid="tableName"/> WHERE id = #{id}
+    </select>
+
+
+    <select id="findDefault" resultType="Module">
+        select * from <include refid="tableName"/> where is_default = 1 limit 0,1
+    </select>
+
+</mapper>

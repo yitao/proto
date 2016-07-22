@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.backstage.entity.R2MA">
+    <sql id="tableName">
+        p_r2ma
+    </sql>
+
+    <resultMap id="r2maMap" type="R2MA">
+        <result column="role_id" property="roleId"/>
+        <result column="module_id" property="moduleId"/>
+        <result column="action_id" property="actionId"/>
+    </resultMap>
+
+    <insert id="insert" parameterType="R2MA">
+        INSERT INTO <include refid="tableName"/>(role_id,module_id,action_id)
+        VALUES (#{roleId},#{moduleId},#{actionId})
+    </insert>
+
+    <delete id="delete" parameterType="R2MA">
+        DELETE FROM <include refid="tableName"/> WHERE  role_id = #{roleId} AND module_id = #{moduleId} AND action_id = #{actionId}
+    </delete>
+
+    <select id="findRmaByRoleId" parameterType="String" resultMap="r2maMap">
+        SELECT * FROM <include refid="tableName"/> WHERE role_id = #{roleId}
+    </select>
+
+    <select id="findAll" resultType="R2MA">
+        SELECT * FROM <include refid="tableName"/>
+    </select>
+
+    <delete id="deleteByRoleId" parameterType="String">
+        DELETE FROM <include refid="tableName"/> WHERE role_id = #{roleId}
+    </delete>
+
+    <delete id="deleteByModuleId" parameterType="String">
+        DELETE FROM <include refid="tableName"/> WHERE module_id = #{moduleId}
+    </delete>
+
+    <delete id="deleteByActionId" parameterType="String">
+        DELETE FROM <include refid="tableName"/> WHERE action_id = #{actionId}
+    </delete>
+
+    <select id="findAllActionByAccount" parameterType="String" resultType="String">
+      SELECT `action` FROM p_action c LEFT JOIN
+        (SELECT action_id FROM <include refid="tableName"/> a LEFT JOIN
+        (SELECT roleId FROM admin_user WHERE id=#{accountId}) b
+        ON a.role_id = b.roleId) d
+        ON c.id = d.action_id
+    </select>
+
+
+</mapper>

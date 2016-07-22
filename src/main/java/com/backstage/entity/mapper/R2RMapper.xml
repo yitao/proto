@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.backstage.entity.R2R">
+    <sql id="tableName">
+        p_r2r
+    </sql>
+
+
+    <resultMap id="r2rMap" type="R2R">
+        <result column="role_id" property="roleId"/>
+        <result column="opened_role_id" property="openedRoleId"/>
+    </resultMap>
+
+    <insert id="insert" parameterType="R2R">
+        INSERT INTO<include refid="tableName"/>(role_id,opened_role_id)
+        VALUES (#{roleId},#{openedRoleId})
+    </insert>
+
+    <delete id="delete" parameterType="R2R">
+        DELETE FROM
+        <include refid="tableName"/>
+        WHERE role_id = #{roleId} AND opened_role_id = #{openedRoleId}
+    </delete>
+
+    <delete id="deleteByRoleId" parameterType="String">
+        DELETE FROM
+        <include refid="tableName"/>
+        WHERE role_id = #{roleId}
+    </delete>
+
+    <delete id="deleteByOpenedRoleId" parameterType="String">
+        DELETE FROM
+        <include refid="tableName"/>
+        WHERE opened_role_id = #{openRoleId}
+    </delete>
+
+    <select id="findAllByRoleId" parameterType="String" resultMap="r2rMap">
+        SELECT * FROM
+        <include refid="tableName"/>
+        WHERE role_id = #{roleId}
+    </select>
+
+
+</mapper>
