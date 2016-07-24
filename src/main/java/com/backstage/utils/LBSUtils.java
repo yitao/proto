@@ -1,10 +1,5 @@
 package com.backstage.utils;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
-import com.saysth.commons.http.HttpHelper;
-import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.Assert;
@@ -13,7 +8,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
-import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -272,7 +266,7 @@ public class LBSUtils {
      * @return
      */
     public static String getApiResult(String apiUrl, Map<String, String> params, String referrer, String userAgent) {
-        try {
+        /*try {
             HttpHelper httpHelper = HttpHelper.connect(apiUrl).data(params);
             if (StringUtils.isNotBlank(referrer)) {
                 httpHelper.referrer(referrer);
@@ -283,7 +277,7 @@ public class LBSUtils {
             return httpHelper.get().html();
         } catch (Exception e) {
             log.error("Error", e);
-        }
+        }*/
         return null;
     }
 
@@ -357,7 +351,7 @@ public class LBSUtils {
      */
     public static double[] turnGps2BaiduXY(double lon, double lat) {
         try {
-            String param = "ak=C1ff4659765b7ad281c6fe11169a886f&from=1&to=5&coords=" + lon + "," + lat;
+            /*String param = "ak=C1ff4659765b7ad281c6fe11169a886f&from=1&to=5&coords=" + lon + "," + lat;
             String resp = HttpHelper.connect("http://api.map.baidu.com/geoconv/v1/").timeout(2000).post(param).html();
             log.info(resp);
             JSONObject jsonObj = JSON.parseObject(resp);
@@ -368,16 +362,17 @@ public class LBSUtils {
                 return new double[]{pos.getDouble("x"), pos.getDouble("y")};
             } else {
                 return new double[]{lon, lat};
-            }
+            }*/
         } catch (Exception e) {
             e.printStackTrace();
             return new double[]{lon, lat};
         }
+        return null;
     }
 
     public static String getIpLocation(String ip) {
         try {
-            Map<String, String> params = new HashMap<String, String>();
+            /*Map<String, String> params = new HashMap<String, String>();
             params.put("ak", "C1ff4659765b7ad281c6fe11169a886f");
             params.put("ip", ip);
             String resp = HttpHelper.connect("http://api.map.baidu.com/location/ip").timeout(3000).data(params).get()
@@ -385,11 +380,12 @@ public class LBSUtils {
             log.info(resp);
             JSONObject jsonObj = JSON.parseObject(resp);
             String address = jsonObj.getString("address");
-            return address;
+            return address;*/
         } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
+        return null;
     }
 
     /**

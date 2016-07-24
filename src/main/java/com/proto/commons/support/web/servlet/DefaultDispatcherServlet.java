@@ -1,6 +1,7 @@
 package com.proto.commons.support.web.servlet;
 
-import com.proto.commons.utils.ResourceUtil;
+import com.backstage.service.ActionService;
+import com.backstage.utils.ResourceUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.BeanFactoryUtils;
 import org.springframework.context.ApplicationContext;
@@ -22,7 +23,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Created by and on 2016/6/27.
+ * Created by yitao on 2016/6/13.
  */
 public class DefaultDispatcherServlet extends DispatcherServlet {
     private static final String SCOPED_TARGET_NAME_PREFIX = "scopedTarget.";
@@ -41,7 +42,7 @@ public class DefaultDispatcherServlet extends DispatcherServlet {
         ApplicationContext applicationContext = context.getParent();
         boolean reloadAction = false;
         try {
-            String permissionInitFlag = ResourceUtil.getProperty("permissionInitFlag");
+            String permissionInitFlag = ResourceUtils.getProperty("permissionInitFlag");
             reloadAction = Boolean.parseBoolean(permissionInitFlag);
         } catch (Exception e) {
             reloadAction = false;
@@ -65,13 +66,14 @@ public class DefaultDispatcherServlet extends DispatcherServlet {
     }
 
     protected Set<String> detectHandlerMethods(ApplicationContext applicationContext, final Object handler) {
-        Set<String> result = new HashSet<String>();
+        Set<String> result = new HashSet<>();
         Class<?> handlerType = (handler instanceof String ?
                 applicationContext.getType((String) handler) : handler.getClass());
         final Class<?> userType = ClassUtils.getUserClass(handlerType);
 
         Map<Method, RequestMappingInfo> methods = MethodIntrospector.selectMethods(userType,
                 new MethodIntrospector.MetadataLookup<RequestMappingInfo>() {
+                    @Override
                     public RequestMappingInfo inspect(Method method) {
                         return getMappingForMethod(method, userType);
                     }

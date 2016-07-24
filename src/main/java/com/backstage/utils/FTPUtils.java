@@ -23,11 +23,11 @@ import java.net.SocketException;
 public class FTPUtils {
     protected final static Logger log = LoggerFactory.getLogger(FTPUtils.class);
 
-    private static String ftpServers = ResourceUtil.getProperty("ftp.sever"); // 可用|分隔多个服务器地址
-    private static int ftpPort = Integer.parseInt(ResourceUtil.getProperty("ftp.port"));
-    private static String ftpUser = ResourceUtil.getProperty("ftp.user");
-    private static String ftpPassword = ResourceUtil.getProperty("ftp.password");
-    private static String mode = ResourceUtil.getProperty("ftp.mode");
+    private static String ftpServers = ResourceUtils.getProperty("ftp.sever"); // 可用|分隔多个服务器地址
+    private static int ftpPort = Integer.parseInt(ResourceUtils.getProperty("ftp.port"));
+    private static String ftpUser = ResourceUtils.getProperty("ftp.user");
+    private static String ftpPassword = ResourceUtils.getProperty("ftp.password");
+    private static String mode = ResourceUtils.getProperty("ftp.mode");
 
     private static int BUF_SIZE = 1024 * 1024;
     private static ThreadLocal<FTPClient> ftpClientThreadLocal = new ThreadLocal<FTPClient>();
@@ -101,10 +101,10 @@ public class FTPUtils {
      */
     public static String upload(InputStream input, String filename, String oldFilename) throws Exception {
         boolean flag = false;
-        if (StrUtils.isNotBlank(ftpServers)) {
+        if (StringUtils.isNotBlank(ftpServers)) {
             String ftpServer[] = ftpServers.split("\\|");
             for (int i = 0; i < ftpServer.length; i++) {
-                if (StrUtils.isNotBlank(ftpServer[i])) {
+                if (StringUtils.isNotBlank(ftpServer[i])) {
                     flag = uploadFile(ftpServer[i], ftpPort, ftpUser, ftpPassword, mode, input, filename, oldFilename);
                 }
             }
@@ -124,10 +124,10 @@ public class FTPUtils {
      */
     public static boolean delete(String filename) {
         boolean flag = false;
-        if (StrUtils.isNotBlank(ftpServers)) {
+        if (StringUtils.isNotBlank(ftpServers)) {
             String ftpServer[] = ftpServers.split("\\|");
             for (int i = 0; i < ftpServer.length; i++) {
-                if (StrUtils.isNotBlank(ftpServer[i])) {
+                if (StringUtils.isNotBlank(ftpServer[i])) {
                     flag = deleteFile(ftpServer[i], ftpPort, ftpUser, ftpPassword, filename);
                 }
             }
@@ -143,10 +143,10 @@ public class FTPUtils {
      */
     public static boolean deleteDirectory(String filePath) {
         boolean flag = false;
-        if (StrUtils.isNotBlank(ftpServers)) {
+        if (StringUtils.isNotBlank(ftpServers)) {
             String ftpServer[] = ftpServers.split("\\|");
             for (int i = 0; i < ftpServer.length; i++) {
-                if (StrUtils.isNotBlank(ftpServer[i])) {
+                if (StringUtils.isNotBlank(ftpServer[i])) {
                     flag = removeDirectory(ftpServer[i], ftpPort, ftpUser, ftpPassword, filePath);
                 }
             }
@@ -187,7 +187,7 @@ public class FTPUtils {
         // filename = StringUtils.replace(filename, "/+", "/");
         // oldFile = StringUtils.replace(oldFile, "/+", "/");
 
-        if (StrUtils.isNotBlank(oldFile)) {
+        if (StringUtils.isNotBlank(oldFile)) {
             if (log.isInfoEnabled()) {
                 log.info("Del oldFile: " + oldFile);
             }
@@ -219,7 +219,7 @@ public class FTPUtils {
      */
     private static boolean deleteFile(String url, int port, String username, String password, String filename) {
         try {
-            if (StrUtils.isNotBlank(filename)) {
+            if (StringUtils.isNotBlank(filename)) {
                 FTPClient ftp = getFTPClient(url, port, username, password, mode);
                 ftp.deleteFile(filename);
             }
@@ -242,7 +242,7 @@ public class FTPUtils {
      */
     private static boolean removeDirectory(String url, int port, String username, String password, String directory) {
         try {
-            if (StrUtils.isNotBlank(directory)) {
+            if (StringUtils.isNotBlank(directory)) {
                 FTPClient ftp = getFTPClient(url, port, username, password, mode);
                 return removeDirectory(ftp, directory);
             }

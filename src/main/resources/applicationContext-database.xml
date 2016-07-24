@@ -43,7 +43,7 @@
 
 		<!-- 配置监控统计拦截的filters -->
 		<property name="filters" value="config,stat,wall"/>
-		<property name="connectionProperties" value="config.decrypt=true;config.decrypt.key=${config.decrypt.key}" />
+		<!--<property name="connectionProperties" value="config.decrypt=false;config.decrypt.key=${config.decrypt.key}" />-->
 	</bean>
 
 	<!-- transaction manager, use JtaTransactionManage for global tx -->

@@ -8,27 +8,27 @@
 	<description>Spring Quartz配置文件，任何对预定时间的改动都需要清除MYSQL数据库中相应记录</description>
 
 	<!-- 使用quartz定时执行数据加载 -->
-	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+	<!--<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
 		<property name="triggers">
 			<list>
-<!--				<ref bean="deleteRejectContactJobTrigger" />
+&lt;!&ndash;				<ref bean="deleteRejectContactJobTrigger" />
 				<ref bean="wxQrUpdateJobTrigger" />
 				<ref bean="deviceBatchJobTrigger" />
 				<ref bean="companyUserReportJobTrigger" />
-				<ref bean="dailyStatReportJobTrigger" />-->
-				<!--
+				<ref bean="dailyStatReportJobTrigger" />&ndash;&gt;
+				&lt;!&ndash;
 				<ref bean="qiniuSrcCleanJobTrigger" />
-				-->
+				&ndash;&gt;
 			</list>
 		</property>
-		<!-- 启动时延期2秒开始任务 -->
+		&lt;!&ndash; 启动时延期2秒开始任务 &ndash;&gt;
 		<property name="startupDelay" value="2" />
-		<!-- 保存Job数据到数据库所需的数据源 -->
+		&lt;!&ndash; 保存Job数据到数据库所需的数据源 &ndash;&gt;
 		<property name="dataSource" ref="dataSource" />
-		<!-- Job接受applicationContext的成员变量名 -->
+		&lt;!&ndash; Job接受applicationContext的成员变量名 &ndash;&gt;
 		<property name="applicationContextSchedulerContextKey" value="applicationContext" />
 		<property name="configLocation" value="classpath:quartz.properties" />
-	</bean>
+	</bean>-->
 
 	<!--&lt;!&ndash; 心跳 &ndash;&gt;-->
 	<!--<bean id="heartbeatJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">-->

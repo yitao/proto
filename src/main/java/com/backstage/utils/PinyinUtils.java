@@ -1,16 +1,16 @@
 package com.backstage.utils;
 
-import net.sourceforge.pinyin4j.PinyinHelper;
-import net.sourceforge.pinyin4j.format.HanyuPinyinCaseType;
-import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;
-import net.sourceforge.pinyin4j.format.HanyuPinyinToneType;
+//import net.sourceforge.pinyin4j.PinyinHelper;
+//import net.sourceforge.pinyin4j.format.HanyuPinyinCaseType;
+//import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;
+//import net.sourceforge.pinyin4j.format.HanyuPinyinToneType;
 import org.apache.commons.lang3.StringUtils;
 
 /**
  * 拼音工具类
  */
 public class PinyinUtils {
-    private static final HanyuPinyinOutputFormat OUTPUT_FORMAT = new HanyuPinyinOutputFormat();
+    /*private static final HanyuPinyinOutputFormat OUTPUT_FORMAT = new HanyuPinyinOutputFormat();
 
     static {
         OUTPUT_FORMAT.setCaseType(HanyuPinyinCaseType.UPPERCASE);
@@ -42,13 +42,13 @@ public class PinyinUtils {
         }
     }
 
-    /**
+    *//**
      * 用逗号分隔拼音
      * 非中文字符不会出现在结果中
      *
      * @param input
      * @return
-     */
+     *//*
     public static String getPinyinLetterWithSep(String input) {
         if (StringUtils.isBlank(input)) {
             return null;
@@ -80,13 +80,13 @@ public class PinyinUtils {
         }
     }
 
-    /**
+    *//**
      * 取中文词首字母，如张三:ZS
      * 非中文字符不会出现在结果中
      *
      * @param input
      * @return
-     */
+     *//*
     public static String getPinyinCapLetter(String input) {
         if (StringUtils.isBlank(input)) {
             return null;
@@ -119,5 +119,5 @@ public class PinyinUtils {
 //		System.out.println(PinyinUtils.getPinyinLetterWithSep("微位(fdsaf上海)fsdaf网fsdafsda络型技jdsaf有限公司"));
 //		System.out.println(PinyinUtils.getPinyinLetterWithSep("扒"));
         System.out.println(PinyinUtils.getPinyinCapLetter("张三"));
-    }
+    }*/
 }

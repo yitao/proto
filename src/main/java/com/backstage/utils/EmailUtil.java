@@ -1,7 +1,5 @@
 package com.backstage.utils;
 
-import com.saysth.commons.entity.EmailInfo;
-
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
@@ -16,13 +14,16 @@ import java.util.Properties;
  * @author
  */
 public class EmailUtil {
+/*
 
-    /**
+    */
+/**
      * 以文本格式发送邮件
      *
      * @param emailInfo - 待发送的邮件的信息
      * @throws MessagingException
-     */
+     *//*
+
     public static boolean sendTextMail(EmailInfo emailInfo) throws MessagingException {
         if (emailInfo != null) {
             Properties pro = emailInfo.getProperties();
@@ -56,12 +57,14 @@ public class EmailUtil {
         return false;
     }
 
-    /**
+    */
+/**
      * 以HTML格式发送邮件
      *
      * @param emailInfo - 待发送的邮件信息
      * @throws MessagingException
-     */
+     *//*
+
     public static boolean sendHtmlMail(EmailInfo emailInfo) throws MessagingException {
         if (emailInfo != null) {
             Properties pro = emailInfo.getProperties();
@@ -99,5 +102,6 @@ public class EmailUtil {
         }
         return false;
     }
+*/
 
 }

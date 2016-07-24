@@ -2,8 +2,6 @@ package com.backstage.service;
 
 import com.backstage.dao.*;
 import com.backstage.entity.*;
-import com.saysth.admin.dao.*;
-import com.saysth.admin.entity.*;
 import org.apache.commons.codec.binary.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,7 +34,7 @@ public class PermissionService {
 //    private RoleDao roleDao;
     //使用系统自身的role
     @Autowired
-    private com.saysth.admin.dao.RoleDao roleDao;
+    private RoleDao roleDao;
 
 
     public void assignAR(String accountId, String roleId) {
@@ -123,16 +121,16 @@ public class PermissionService {
      *
      * @return
      */
-    public List<com.saysth.admin.entity.Role> queryR2R() {
+    public List<Role> queryR2R() {
         //查询当前用户角色所有可见角色
-        List<com.saysth.admin.entity.Role> roles = roleDao.findAll();
+        List<Role> roles = roleDao.findAll();
         //查询当前用户角色所有可见模块，功能
-        for (com.saysth.admin.entity.Role role : roles) {
-            List<com.saysth.admin.entity.Role> openedRoles = new ArrayList<>();
+        for (Role role : roles) {
+            List<Role> openedRoles = new ArrayList<>();
             String roleId = role.getId();
             List<R2R> r2rs = r2rDao.findAllByRoleId(roleId);
-            for (com.saysth.admin.entity.Role role2 : roles) {
-                com.saysth.admin.entity.Role openedRole = role2.clone();
+            for (Role role2 : roles) {
+                Role openedRole = role2.clone();
                 for (R2R r2r : r2rs) {
                     if (StringUtils.equals(r2r.getOpenedRoleId(), openedRole.getId())) {
                         openedRole.setState(1);
@@ -151,32 +149,32 @@ public class PermissionService {
      *
      * @return
      */
-    public List<com.saysth.admin.entity.Role> queryrolewithprivilege(String userId) {
+    public List<Role> queryrolewithprivilege(String userId) {
         boolean buildIn = false;
-        List<com.saysth.admin.entity.Role> ownerRoles = roleDao.findAllRoleByAccountId(userId);
-        com.saysth.admin.entity.Role owner = null;
+        List<Role> ownerRoles = new ArrayList<>();//roleDao.findAllRoleByAccountId(userId);
+        Role owner = null;
         if(ownerRoles.size()>0){
             owner = ownerRoles.get(0);
         }
-        for (com.saysth.admin.entity.Role role : ownerRoles) {
-            if(role.isBuildIn()){
+        for (Role role : ownerRoles) {
+            /*if(role.isBuildIn()){
                 buildIn = true;
                 break;
-            }
+            }*/
         }
-        List<com.saysth.admin.entity.Role> roles = null;
+        List<Role> roles = null;
         List<Module> modules = null;
         if(buildIn){
             roles = roleDao.findAll();
             modules = moduleService.findAllMA();
         }else{
             //查询当前用户角色所有可见角色
-            roles =  roleDao.findAllOpenedRoleByAccountId(userId);
+            roles =  new ArrayList<>();//roleDao.findAllOpenedRoleByAccountId(userId);
             //查询当前用户角色所有可见模块，功能
             modules =  moduleService.findAllMA4Opened(owner.getId());
         }
         int maCheckCount = 0;
-        for (com.saysth.admin.entity.Role role : roles) {
+        for (Role role : roles) {
             List<Module> nmodules = new ArrayList<>();
             String roleId = role.getId();
             List<RMA> rmas = rmaDao.findAllByRoleId(roleId);
@@ -217,13 +215,13 @@ public class PermissionService {
      *
      * @return
      */
-    public List<com.saysth.admin.entity.Role> queryrolewithprivilege4show() {
+    public List<Role> queryrolewithprivilege4show() {
         //查询所有角色
-        List<com.saysth.admin.entity.Role> roles = roleDao.findAll();
+        List<Role> roles = roleDao.findAll();
         //查询所有模块功能
         List<Module> modules = moduleService.findAllMA();
         int maCheckCount = 0;
-        for (com.saysth.admin.entity.Role role : roles) {
+        for (Role role : roles) {
             List<Module> nmodules = new ArrayList<>();
             String roleId = role.getId();
             List<R2MA> rmas = r2maDao.findAllByRoleId(roleId);

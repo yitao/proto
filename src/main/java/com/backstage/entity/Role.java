@@ -14,6 +14,12 @@ public class Role extends BaseDataEntity {
 
     @Transient
     List<Module> modules;
+    @Transient
+    List<Role> openedRoles;
+    @Transient
+    List<Module> openedModules;
+
+    int state;
 
     public String getName() {
         return name;
@@ -45,5 +51,39 @@ public class Role extends BaseDataEntity {
 
     public void setModules(List<Module> modules) {
         this.modules = modules;
+    }
+
+    public Boolean getInuse() {
+        return inuse;
+    }
+
+    public List<Role> getOpenedRoles() {
+        return openedRoles;
+    }
+
+    public void setOpenedRoles(List<Role> openedRoles) {
+        this.openedRoles = openedRoles;
+    }
+
+    public List<Module> getOpenedModules() {
+        return openedModules;
+    }
+
+    public void setOpenedModules(List<Module> openedModules) {
+        this.openedModules = openedModules;
+    }
+
+    public int getState() {
+        return state;
+    }
+
+    public void setState(int state) {
+        this.state = state;
+    }
+
+    @Override
+    public Role clone(){
+
+        return null;
     }
 }

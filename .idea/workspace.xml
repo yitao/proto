@@ -2,97 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b42f0a7-6291-4fb1-8b42-6b03cf5769a0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/dao/AccountDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/dao/RoleDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/entity/Role.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/utils/EmailUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/utils/FTPUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/utils/FileUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/utils/LBSUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/utils/PhantomUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/utils/PinyinUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/utils/ResourceUtils.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/dao/AccountDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/dao/RoleDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/entity/IAccount.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/entity/IRole.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/entity/Role.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/applicationContext-shiro.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/applicationContext-shiro.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webapp/WEB-INF/decorators/admin/footer.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webapp/WEB-INF/decorators/admin/header.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webapp/WEB-INF/decorators/admin/main.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webapp/WEB-INF/decorators/admin/quick_sidebar.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webapp/WEB-INF/decorators/admin/sidebar.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webapp/WEB-INF/decorators/channel/device/footer.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webapp/WEB-INF/decorators/channel/device/header.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webapp/WEB-INF/decorators/channel/device/main.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webapp/WEB-INF/decorators/channel/device/quick_sidebar.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webapp/WEB-INF/decorators/channel/device/sidebar.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webapp/WEB-INF/decorators/channel/promotion/footer.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webapp/WEB-INF/decorators/channel/promotion/header.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webapp/WEB-INF/decorators/channel/promotion/main.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webapp/WEB-INF/decorators/channel/promotion/quick_sidebar.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webapp/WEB-INF/decorators/channel/promotion/sidebar.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webapp/WEB-INF/decorators/company/footer.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webapp/WEB-INF/decorators/company/header.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webapp/WEB-INF/decorators/company/main.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webapp/WEB-INF/decorators/company/quick_sidebar.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/webapp/WEB-INF/decorators/company/sidebar.jsp" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/controller/AdminController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/controller/BaseAdminController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/filter/PermissionFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/proto/commons/support/web/BaseController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/proto/commons/utils/CustomTimestampEditor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/proto/commons/utils/JsonUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/proto/commons/utils/UrlUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webapp/WEB-INF/views/backstage/index.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/backstage/logging/Log.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/backstage/logging/Log4jImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/backstage/logging/LogFactory.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/backstage/logging/NoLoggingImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/backstage/logging/Resources.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/backstage/shiro/bean/PermissionShiroFilterFactoryBean.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/backstage/shiro/filter/PermissionAuthorizationFilter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/backstage/shiro/realm/RoleRealm.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/backstage/shiro/servlet/DefaultDispatcherServlet.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proto.iml" afterPath="$PROJECT_DIR$/proto.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/webapp/WEB-INF/web.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/controller/PermissionController.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/controller/PermissionController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/dao/ARDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/dao/ARDao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/dao/ActionDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/dao/ActionDao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/dao/BaseSqlDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/dao/BaseSqlDao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/dao/ModuleDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/dao/ModuleDao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/dao/R2MADao.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/dao/R2MADao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/dao/R2RDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/dao/R2RDao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/dao/RMADao.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/dao/RMADao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/dao/mybatis/ARDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/dao/mybatis/ARDaoImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/dao/mybatis/AccountDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/dao/mybatis/AccountDaoImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/dao/mybatis/ActionDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/dao/mybatis/ActionDaoImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/dao/mybatis/BaseSqlDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/dao/mybatis/BaseSqlDaoImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/dao/mybatis/ModuleDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/dao/mybatis/ModuleDaoImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/dao/mybatis/R2MADaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/dao/mybatis/R2MADaoImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/dao/mybatis/R2RDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/dao/mybatis/R2RDaoImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/dao/mybatis/RMADaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/dao/mybatis/RMADaoImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/dao/mybatis/RoleDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/dao/mybatis/RoleDaoImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/datasource/SqlSessionFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/datasource/SqlSessionFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/entity/AR.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/entity/AR.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/entity/Account.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/entity/Account.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/entity/Action.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/entity/Action.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/entity/BaseDataEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/entity/BaseDataEntity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/entity/BaseLabelEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/entity/BaseLabelEntity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/entity/Module.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/entity/Module.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/entity/R2MA.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/entity/R2MA.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/entity/R2R.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/entity/R2R.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/entity/RMA.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/entity/RMA.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/entity/mapper/ARMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/entity/mapper/ARMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/entity/mapper/AccountMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/entity/mapper/AccountMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/entity/mapper/ActionMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/entity/mapper/ActionMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/entity/mapper/ModuleMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/entity/mapper/ModuleMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/entity/mapper/R2MAMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/entity/mapper/R2MAMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/entity/mapper/R2RMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/entity/mapper/R2RMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/entity/mapper/RMAMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/entity/mapper/RMAMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/entity/mapper/RoleMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/entity/mapper/RoleMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/logging/Log.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/logging/Log.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/logging/Log4jImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/logging/Log4jImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/logging/LogFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/logging/LogFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/logging/NoLoggingImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/logging/NoLoggingImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/logging/Resources.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/logging/Resources.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/service/AccountService.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/service/AccountService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/service/ActionService.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/service/ActionService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/service/ModuleService.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/service/ModuleService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/service/PermissionService.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/service/PermissionService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/service/RoleService.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/service/RoleService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/shiro/bean/PermissionShiroFilterFactoryBean.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/shiro/bean/PermissionShiroFilterFactoryBean.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/shiro/filter/PermissionAuthorizationFilter.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/shiro/filter/PermissionAuthorizationFilter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/shiro/realm/RoleRealm.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/shiro/realm/RoleRealm.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/shiro/servlet/DefaultDispatcherServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/shiro/servlet/DefaultDispatcherServlet.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/proto/backstage/utils/SQLUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/utils/SQLUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/backstage/controller/PermissionController.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/controller/PermissionController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/backstage/entity/Role.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/entity/Role.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/backstage/service/PermissionService.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/service/PermissionService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/backstage/utils/EmailUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/utils/EmailUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/backstage/utils/FTPUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/utils/FTPUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/backstage/utils/LBSUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/utils/LBSUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/backstage/utils/PhantomUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/utils/PhantomUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/backstage/utils/PinyinUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/backstage/utils/PinyinUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/proto/commons/support/web/servlet/DefaultDispatcherServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/proto/commons/support/web/servlet/DefaultDispatcherServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/applicationContext-database.xml" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext-database.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/applicationContext-quartz.xml" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext-quartz.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/applicationContext-redis.xml" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext-redis.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/application-dev.properties" afterPath="$PROJECT_DIR$/target/classes/application-dev.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/applicationContext-database.xml" afterPath="$PROJECT_DIR$/target/classes/applicationContext-database.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/applicationContext-quartz.xml" afterPath="$PROJECT_DIR$/target/classes/applicationContext-quartz.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/applicationContext-redis.xml" afterPath="$PROJECT_DIR$/target/classes/applicationContext-redis.xml" />
     </list>
     <ignored path="proto.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -123,51 +68,101 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapp/WEB-INF/web.xml">
+      <file leaf-file-name="application-dev.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="158" column="20" selection-start-line="158" selection-start-column="20" selection-end-line="158" selection-end-column="20" />
+              <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PermissionAuthorizationFilter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/backstage/shiro/filter/PermissionAuthorizationFilter.java">
+      <file leaf-file-name="application-prd.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application-prd.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DefaultDispatcherServlet.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/backstage/shiro/servlet/DefaultDispatcherServlet.java">
+      <file leaf-file-name="applicationContext-quartz.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext-quartz.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34675616">
-              <caret line="45" column="68" selection-start-line="45" selection-start-column="68" selection-end-line="45" selection-end-column="68" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="8" selection-start-line="10" selection-start-column="4" selection-end-line="30" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ResourceUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/backstage/utils/ResourceUtils.java">
+      <file leaf-file-name="applicationContext-mongo.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext-mongo.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="79" column="16" selection-start-line="79" selection-start-column="16" selection-end-line="79" selection-end-column="16" />
+              <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/backstage/utils/FileUtils.java">
+      <file leaf-file-name="spring-mvc.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/spring-mvc.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="220" column="0" selection-start-line="220" selection-start-column="0" selection-end-line="220" selection-end-column="0" />
+              <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="applicationContext-database.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext-database.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/backstage/controller/AdminController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.2607204">
+              <caret line="9" column="24" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DruidAbstractDataSource.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/druid/1.0.18/druid-1.0.18.jar!/com/alibaba/druid/pool/DruidAbstractDataSource.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="1602" column="36" selection-start-line="1602" selection-start-column="36" selection-end-line="1602" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DruidDataSource.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/druid/1.0.18/druid-1.0.18.jar!/com/alibaba/druid/pool/DruidDataSource.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="96" column="13" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="169" column="29" selection-start-line="169" selection-start-column="24" selection-end-line="169" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -194,23 +189,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis-conf.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/applicationContext-shiro.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/proto/commons/utils/spring/SpringContextHolder.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/applicationContext-service.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/applicationContext-quartz.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/applicationContext-mongo.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/proto/commons/utils/filter/RealIPRequestWrapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/proto/backstage/web/filter/RealIPFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/proto/commons/support/web/filter/ApiParamFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/proto/commons/support/web/filter/CORSFilter.java" />
-        <option value="$PROJECT_DIR$/webapp/WEB-INF/view/error/404.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/proto/commons/support/web/listener/StartupContextListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/proto/commons/utils/spring/ResourceUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/proto/commons/utils/ResourceUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/proto/commons/utils/FileUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/proto/commons/support/web/servlet/DefaultDispatcherServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/proto/backstage/dao/ModuleDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/proto/backstage/dao/Account.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/proto/backstage/dao/ActionDao.java" />
@@ -239,7 +218,28 @@
         <option value="$PROJECT_DIR$/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/backstage/utils/ResourceUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/backstage/utils/FileUtils.java" />
+        <option value="$PROJECT_DIR$/webapp/WEB-INF/views/backstage/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/backstage/entity/Role.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/backstage/service/PermissionService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/backstage/utils/LBSUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/backstage/shiro/servlet/DefaultDispatcherServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/proto/commons/support/web/servlet/DefaultDispatcherServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/backstage/utils/EmailUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/backstage/utils/FTPUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/backstage/utils/PhantomUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/backstage/utils/PinyinUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/proto/commons/utils/UrlUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/proto/commons/utils/URLUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/proto/commons/utils/JsonUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/proto/commons/utils/CustomTimestampEditor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/backstage/controller/BaseAdminController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/backstage/controller/AdminController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/proto/commons/support/web/BaseController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/backstage/controller/PermissionController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/applicationContext-redis.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/applicationContext-database.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/application-dev.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/applicationContext-quartz.xml" />
       </list>
     </option>
   </component>
@@ -247,6 +247,13 @@
   <component name="JsBuildToolPackageJson" detection-done="true" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -287,6 +294,16 @@
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
         </PATH_ELEMENT>
       </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Profiles" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProfilesNode" />
+        </PATH_ELEMENT>
+      </PATH>
     </treeState>
   </component>
   <component name="MavenRunner">
@@ -294,9 +311,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1932" />
-    <option name="height" value="1056" />
+    <option name="width" value="1372" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -323,8 +339,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -353,7 +367,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
+              <option name="myItemId" value="target" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -367,33 +381,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -474,10 +462,6 @@
               <option name="myItemId" value="backstage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -509,135 +493,31 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="shiro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="servlet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backstage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shiro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backstage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shiro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bean" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backstage" />
+              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/webapp" />
-    <property name="settings.editor.selected.configurable" value="preferences.applicationServers" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="project.structure.last.edited" value="Facets" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.291954" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\ideaworkspace\proto" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.proto.backstage.dao" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\git\proto\src\main\java\com\yt\permission" />
@@ -650,8 +530,8 @@
       <recent name="com.backstage.utils" />
       <recent name="com.proto.backstage.entity" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.proto.backstage.dao" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ideaworkspace\proto" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.proto">
@@ -1008,9 +888,6 @@
       </MavenSettings>
       <method />
     </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
-      <method />
-    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -1095,26 +972,14 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
-      <node-options />
-      <working-directory>$PROJECT_DIR$</working-directory>
-      <pass-parent-env>true</pass-parent-env>
-      <envs />
-      <ui>bdd</ui>
-      <extra-mocha-options />
-      <test-kind>DIRECTORY</test-kind>
-      <test-directory />
-      <recursive>false</recursive>
-      <method />
-    </configuration>
     <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
       <method />
     </configuration>
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <configuration default="false" name="proto" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.57" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/proto/" />
+    <configuration default="false" name="proto" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.63" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:18888/proto/" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="proto:war">
@@ -1243,30 +1108,31 @@
       <workItem from="1468994137749" duration="1879000" />
       <workItem from="1469062898719" duration="381000" />
       <workItem from="1469168043024" duration="9000" />
+      <workItem from="1469246316149" duration="635000" />
+      <workItem from="1469328060929" duration="9217000" />
+      <workItem from="1469363358114" duration="37000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15592000" />
+    <option name="totallyTimeSpent" value="25481000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
+    <frame x="-8" y="0" width="1372" height="744" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1764706" sideWeight="0.5030488" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.65849674" sideWeight="0.50457317" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JRebel remote servers log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32158118" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32088414" sideWeight="0.477707" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32088414" sideWeight="0.522293" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1277,10 +1143,12 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.094257854" sideWeight="0.49695122" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.65849674" sideWeight="0.49542683" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09313726" sideWeight="0.49695122" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel remote servers log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1288,26 +1156,30 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1764706" sideWeight="0.5030488" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1764706" sideWeight="0.5030488" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.63071895" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3480392" sideWeight="0.49695122" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09313726" sideWeight="0.49695122" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3307927" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel remote servers log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32088414" sideWeight="0.477707" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32088414" sideWeight="0.522293" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -1331,35 +1203,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="158" column="20" selection-start-line="158" selection-start-column="20" selection-end-line="158" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/backstage/shiro/filter/PermissionAuthorizationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/backstage/shiro/servlet/DefaultDispatcherServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/backstage/utils/ResourceUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="79" column="16" selection-start-line="79" selection-start-column="16" selection-end-line="79" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1367,7 +1214,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="220" column="0" selection-start-line="220" selection-start-column="0" selection-end-line="220" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1375,23 +1221,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="158" column="20" selection-start-line="158" selection-start-column="20" selection-end-line="158" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/backstage/shiro/filter/PermissionAuthorizationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/backstage/shiro/servlet/DefaultDispatcherServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1399,7 +1228,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="79" column="16" selection-start-line="79" selection-start-column="16" selection-end-line="79" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1407,7 +1235,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="220" column="0" selection-start-line="220" selection-start-column="0" selection-end-line="220" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1415,15 +1242,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="158" column="20" selection-start-line="158" selection-start-column="20" selection-end-line="158" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/backstage/shiro/filter/PermissionAuthorizationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1431,15 +1249,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="158" column="20" selection-start-line="158" selection-start-column="20" selection-end-line="158" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/backstage/shiro/filter/PermissionAuthorizationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1454,13 +1263,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-mvc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.410714">
-          <caret line="34" column="31" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -1485,27 +1287,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext-database.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="24.535715">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext-quartz.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.696429">
-          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext-mongo.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.0535715">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webapp/WEB-INF/views/error/404.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.7142856">
@@ -1517,34 +1298,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/proto/commons/utils/FileUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="220" column="1" selection-start-line="220" selection-start-column="1" selection-end-line="220" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/proto/commons/utils/ResourceUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="24" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/proto/commons/support/web/servlet/DefaultDispatcherServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="74" column="23" selection-start-line="74" selection-start-column="23" selection-end-line="74" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/WEB-INF/sitemesh3.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.4642857">
-          <caret line="14" column="53" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -1562,34 +1315,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.392857">
-          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="158" column="20" selection-start-line="158" selection-start-column="20" selection-end-line="158" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/backstage/shiro/filter/PermissionAuthorizationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/backstage/utils/ResourceUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="79" column="16" selection-start-line="79" selection-start-column="16" selection-end-line="79" selection-end-column="16" />
-          <folding />
+          <caret line="79" column="9" selection-start-line="79" selection-start-column="9" selection-end-line="79" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1597,14 +1326,254 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="220" column="0" selection-start-line="220" selection-start-column="0" selection-end-line="220" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/WEB-INF/sitemesh3.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.5">
+          <caret line="14" column="53" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/WEB-INF/views/backstage/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.7142856">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/backstage/entity/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="31" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/backstage/dao/RoleDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/backstage/dao/mybatis/RoleDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2889734">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/backstage/service/PermissionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29122055">
+          <caret line="208" column="9" selection-start-line="208" selection-start-column="9" selection-end-line="208" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/backstage/filter/PermissionFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25285172">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/backstage/utils/LBSUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32509506">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.785714">
+          <caret line="88" column="60" selection-start-line="88" selection-start-column="23" selection-end-line="88" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/proto/commons/support/web/servlet/DefaultDispatcherServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.07224335">
+          <caret line="2" column="43" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/backstage/utils/EmailUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/backstage/utils/FTPUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6271186">
+          <caret line="103" column="49" selection-start-line="103" selection-start-column="49" selection-end-line="103" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/backstage/utils/PhantomUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.661017">
+          <caret line="18" column="72" selection-start-line="18" selection-start-column="72" selection-end-line="18" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/backstage/utils/PinyinUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="53" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/proto/commons/utils/ResourceUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="71" column="24" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/proto/commons/utils/FileUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="218" column="0" selection-start-line="218" selection-start-column="0" selection-end-line="218" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/proto/commons/utils/URLUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/proto/commons/utils/JsonUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/proto/commons/utils/CustomTimestampEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/backstage/controller/BaseAdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="55" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/backstage/shiro/servlet/DefaultDispatcherServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/proto/commons/support/web/BaseController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34675616">
-          <caret line="45" column="68" selection-start-line="45" selection-start-column="68" selection-end-line="45" selection-end-column="68" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/backstage/controller/PermissionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext-redis.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.696429">
+          <caret line="77" column="111" selection-start-line="9" selection-start-column="4" selection-end-line="77" selection-end-column="111" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-mvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="169" column="29" selection-start-line="169" selection-start-column="24" selection-end-line="169" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/druid/1.0.18/druid-1.0.18.jar!/com/alibaba/druid/pool/DruidDataSource.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="96" column="13" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/druid/1.0.18/druid-1.0.18.jar!/com/alibaba/druid/pool/DruidAbstractDataSource.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1602" column="36" selection-start-line="1602" selection-start-column="36" selection-end-line="1602" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext-quartz.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="4" selection-end-line="30" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-prd.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext-mongo.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext-database.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/backstage/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2607204">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -1667,7 +1636,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.1150748" />
+                <option value="0.291954" />
               </list>
             </option>
           </splitter-proportions>

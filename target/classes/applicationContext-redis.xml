@@ -7,7 +7,7 @@
 
 	<description>Spring redis配置文件</description>
 
-	<bean id="jedisPoolConfig1" class="redis.clients.jedis.JedisPoolConfig">
+	<!--<bean id="jedisPoolConfig1" class="redis.clients.jedis.JedisPoolConfig">
 		<property name="maxTotal" value="${redis1.maxActive}" />
 		<property name="maxIdle" value="${redis1.maxIdle}" />
 		<property name="maxWaitMillis" value="${redis1.maxWait}" />
@@ -51,30 +51,30 @@
 		<property name="connectionFactory" ref="jedisConnectionFactory2" />
 	</bean>
 
-	<!-- cacheManager -->
+	&lt;!&ndash; cacheManager &ndash;&gt;
 	<bean id="cacheManager" class="org.springframework.data.redis.cache.RedisCacheManager">
 		<constructor-arg index="0" ref="redisTemplate" />
-		<!-- 打开前缀防止冲突 -->
+		&lt;!&ndash; 打开前缀防止冲突 &ndash;&gt;
 		<property name="usePrefix" value="true" />
 		<property name="expires">
 			<map>
-				<!-- 验证码cache 过期时间15分钟 -->
+				&lt;!&ndash; 验证码cache 过期时间15分钟 &ndash;&gt;
 				<entry key="verifyCodeCache" value="900" />
-				<!-- bindInfo 过期时间1天 -->
+				&lt;!&ndash; bindInfo 过期时间1天 &ndash;&gt;
 				<entry key="bindInfoCache" value="86400" />
 				<entry key="JS_TICKET" value="7100" />
 			</map>
 		</property>
 	</bean>
 
-	<!-- seesion相关 -->
+	&lt;!&ndash; seesion相关 &ndash;&gt;
 	<bean id="redisHttpSessionConfiguration" class="org.springframework.session.data.redis.config.annotation.web.http.RedisHttpSessionConfiguration">
-		<!-- session过期时间 默认1800秒 负数为永不过期 -->
+		&lt;!&ndash; session过期时间 默认1800秒 负数为永不过期 &ndash;&gt;
 		<property name="maxInactiveIntervalInSeconds" value="1800" />
 	</bean>
 
-	<!-- Spring session 在遇到redis关闭了config命令后的解决办法 -->
-	<!-- http://docs.spring.io/spring-session/docs/current/reference/html5/#api-redisoperationssessionrepository-sessiondestroyedevent -->
-	<util:constant static-field="org.springframework.session.data.redis.config.ConfigureRedisAction.NO_OP"/>
+	&lt;!&ndash; Spring session 在遇到redis关闭了config命令后的解决办法 &ndash;&gt;
+	&lt;!&ndash; http://docs.spring.io/spring-session/docs/current/reference/html5/#api-redisoperationssessionrepository-sessiondestroyedevent &ndash;&gt;
+	<util:constant static-field="org.springframework.session.data.redis.config.ConfigureRedisAction.NO_OP"/>-->
 
 </beans>

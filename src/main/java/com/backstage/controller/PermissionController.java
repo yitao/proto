@@ -5,8 +5,6 @@ import com.backstage.entity.Action;
 import com.backstage.entity.Module;
 import com.backstage.entity.Role;
 import com.backstage.service.*;
-import com.saysth.admin.web.controller.BaseAdminController;
-import com.saysth.core.web.controller.api.ApiRetMsg;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +22,7 @@ import java.util.Map;
  * Created by yitao on 2016/6/14.
  */
 @Controller("P_PermissionController")
-@RequestMapping("/admin/permission")
+@RequestMapping("/bstage/permission")
 public class PermissionController {
     Logger logger = Logger.getLogger(PermissionController.class);
     @Autowired
@@ -121,12 +119,12 @@ public class PermissionController {
                 moduleService.deleteModule(id);
                 result.put("code",0);
             }else{
-                result.put("code", ApiRetMsg.ERR_PARAM);
+                result.put("code", 1);
             }
         } catch (Exception e) {
             //e.printStackTrace();
             logger.error("删除模块失败：{}",e);
-            result.put("code", ApiRetMsg.ERR_PARAM);
+            result.put("code", 1);
         }
         return result;
     }
@@ -401,7 +399,7 @@ public class PermissionController {
     public Map<String,Object> queryR2R(HttpServletRequest req){
         Map<String,Object> result = new HashMap<String, Object>();
         try{
-            List<com.saysth.admin.entity.Role> roles = permissionService.queryR2R();
+            List<Role> roles = permissionService.queryR2R();
             result.put("code",0);
             result.put("result",roles);
         } catch (Exception e) {
@@ -415,10 +413,10 @@ public class PermissionController {
     @RequestMapping("/queryrolewithprivilege")
     @ResponseBody
     public Map<String,Object> queryrolewithprivilege(HttpServletRequest req){
-        String userId = (String) req.getSession().getAttribute(BaseAdminController.ADMIN_USER_ID);
+        String userId = (String) req.getSession().getAttribute("");
         Map<String,Object> result = new HashMap<String, Object>();
         try{
-            List<com.saysth.admin.entity.Role> roles = permissionService.queryrolewithprivilege(userId);
+            List<Role> roles = permissionService.queryrolewithprivilege(userId);
             result.put("code",0);
             result.put("result",roles);
         } catch (Exception e) {
@@ -526,7 +524,7 @@ public class PermissionController {
     public Map<String,Object> queryrolewithprivilege4show(HttpServletRequest req){
         Map<String,Object> result = new HashMap<String, Object>();
         try{
-            List<com.saysth.admin.entity.Role> roles = permissionService.queryrolewithprivilege4show();
+            List<Role> roles = permissionService.queryrolewithprivilege4show();
             result.put("code",0);
             result.put("result",roles);
         } catch (Exception e) {

@@ -19,8 +19,8 @@ public abstract class PhantomUtils {
         if (StringUtils.isBlank(url) || StringUtils.isBlank(fileName)) {
             throw new IllegalArgumentException();
         }
-        String phantom = ResourceUtil.getProperty("phantomjs.path", "D:/Home/phantomjs-2.0.0-windows/bin/phantomjs");
-        String dir = ResourceUtil.getProperty("phantomjs.workhome", "D:/Home/");
+        String phantom = ResourceUtils.getProperty("phantomjs.path", "D:/Home/phantomjs-2.0.0-windows/bin/phantomjs");
+        String dir = ResourceUtils.getProperty("phantomjs.workhome", "D:/Home/");
         StringBuilder sb = new StringBuilder(phantom);
         sb.append(" loadpage.js ").append(url).append(" ").append(fileName);
         String cmd = sb.toString();
@@ -54,8 +54,8 @@ public abstract class PhantomUtils {
         if (width <= 0 || height <= 0) {
             throw new IllegalArgumentException();
         }
-        String phantom = ResourceUtil.getProperty("phantomjs.path", "D:/Home/phantomjs-2.0.0-windows/bin/phantomjs");
-        String dir = ResourceUtil.getProperty("phantomjs.workhome", "d:/Home/");
+        String phantom = ResourceUtils.getProperty("phantomjs.path", "D:/Home/phantomjs-2.0.0-windows/bin/phantomjs");
+        String dir = ResourceUtils.getProperty("phantomjs.workhome", "d:/Home/");
         StringBuilder sb = new StringBuilder(phantom);
         sb.append(" loadpagewithview.js ").append(url).append(" ").append(fileName).append(" ").append(width).append(" ").append(height);
         String cmd = sb.toString();
@@ -88,8 +88,8 @@ public abstract class PhantomUtils {
         if (width <= 0 || height <= 0) {
             throw new IllegalArgumentException();
         }
-        String phantom = ResourceUtil.getProperty("phantomjs.path", "D:/Home/phantomjs-2.0.0-windows/bin/phantomjs");
-        String dir = ResourceUtil.getProperty("phantomjs.workhome", "d:/Home/");
+        String phantom = ResourceUtils.getProperty("phantomjs.path", "D:/Home/phantomjs-2.0.0-windows/bin/phantomjs");
+        String dir = ResourceUtils.getProperty("phantomjs.workhome", "d:/Home/");
         StringBuilder sb = new StringBuilder(phantom);
         sb.append(" newloadpagewithview.js ").append(url).append(" ").append(fileName).append(" ").append(width).append(" ").append(height);
         String cmd = sb.toString();
@@ -126,8 +126,8 @@ public abstract class PhantomUtils {
         if (width <= 0 || height <= 0) {
             throw new IllegalArgumentException();
         }
-        String phantom = ResourceUtil.getProperty("phantomjs.path", "D:/Home/phantomjs-2.0.0-windows/bin/phantomjs");
-        String dir = ResourceUtil.getProperty("phantomjs.workhome", "d:/Home/");
+        String phantom = ResourceUtils.getProperty("phantomjs.path", "D:/Home/phantomjs-2.0.0-windows/bin/phantomjs");
+        String dir = ResourceUtils.getProperty("phantomjs.workhome", "d:/Home/");
         StringBuilder sb = new StringBuilder(phantom);
         sb.append(" newloadpagewithviewback.js ").append(url).append(" ").append(fileName).append(" ").append(width).append(" ").append(height);
         String cmd = sb.toString();
