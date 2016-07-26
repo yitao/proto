@@ -13,6 +13,8 @@
 
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<mvc:annotation-driven />
+	<!--处理tomcat 把 .html 文件独立问题-->
+	<mvc:default-servlet-handler/>
 	<context:component-scan base-package="com.**.controller" />
 
 	<!-- Handles HTTP GET requests for /static/** by efficiently serving up static resources in the ${webappRoot}/static/ directory -->
